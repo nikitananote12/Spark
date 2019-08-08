@@ -9,7 +9,7 @@ import org.apache.spark.sql.SparkSession
 object dataFrame {
   def main(args: Array[String]): Unit = {
     val path = System.getProperty("user.dir")
-    val path1 = Paths.get(path+"/s3Data").toString
+    val path1 = Paths.get(path+"/src/main/scala/com/table.csv").toString
 val spark = SparkSession.builder()
   .master("local[*]").appName("dataframe").getOrCreate()
     val sc = spark.sparkContext
